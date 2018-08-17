@@ -7,6 +7,7 @@ using System.Net;
 using System.Threading;
 using TheArtOfDev.HtmlRenderer.Core.Entities;
 using static com.insanitydesign.MarkdownViewerPlusPlus.MarkdownViewer;
+using System.Text.RegularExpressions;
 
 /// <summary>
 /// 
@@ -79,6 +80,8 @@ namespace com.insanitydesign.MarkdownViewerPlusPlus.Forms
             {
                 //Get some file information
                 string src = imageLoadEvent.Src;
+                Regex reg = new Regex("^(file|http|https)://.*");
+                if(!reg.IsMatch(src)) src = @"file:///" + src;
                 Uri uri = new Uri(src);
                 string extension = Path.GetExtension(src);
 
