@@ -2,3 +2,10 @@
 td, h1, h2, h3, h4, h5, p, ul, ol, li {
     page-break-inside: avoid; 
 }
+/* vertical alignment for text and code */
+body {font-family: Calibri, sans-serif;}
+code {font-family: Consolas, monospace; color: Navy;}
+/* table border and padding */
+table {border-collapse: collapse;}
+td, th {border: 1px solid Navy; padding: 6px;}
+/* all above can be overwritten by N++ \ Plugins \ MarkdownViewer++ \ Options \ HTML \ Custom CSS */

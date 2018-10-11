@@ -10,6 +10,9 @@ A Notepad++ Plugin to view a Markdown file rendered on-the-fly
 * Notepad++ Unicode Plugin
 
 ## Latest Versions
+* (0.8.201) (- Build number .201 for testing purposes)
+  * Image support relative path - fork <https://github.com/914802951/MarkdownViewerPlusPlus>
+  * Table with borders - but can be overwritten by MarkdownViewer++ [Options](#options) \ HTML \ Custom CSS
 * 0.8.2
   * Merged a lot of bugfixes and improvements, thanks to [monoblaine](https://github.com/monoblaine)
   * Updated [Markdig][3] to v0.15.0, [PDFSharp][5] to v1.50.4845-RC2a and [HTMLRenderer][6] accordingly

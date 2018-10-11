@@ -357,16 +357,10 @@ namespace com.insanitydesign.MarkdownViewerPlusPlus.Forms
             
             //Get all @import statements from the custom CSS
             List<Match> matches = Regex.Matches(this.markdownViewer.Options.HtmlCssStyle, this.patternCSSImportStatements).Cast<Match>().ToList();
-            matches.ForEach(match => match.Captures.Cast<Capture>().ToList().ForEach(capture => cssImportStatements += capture.Value + Environment.NewLine));
-
+            matches.ForEach(match => match.Captures.Cast<Capture>().ToList().ForEach(capture => cssImportStatements += capture.Value + Environment.NewLine));            
+            
             //Return a CSS with the @import statements in front, the base MarkdownViewer++ CSS and the rest of the custom CSS from the user
-            cssImportStatements = cssImportStatements + Environment.NewLine + Resources.MarkdownViewerHTML + Environment.NewLine + Regex.Replace(this.markdownViewer.Options.HtmlCssStyle, this.patternCSSImportStatements, "").Trim();
-            cssImportStatements = cssImportStatements + Environment.NewLine + @"
-table, td, th {
-    border: 1px solid black;
-    border-collapse: collapse;
-} ";
-            return cssImportStatements;
+            return cssImportStatements + Environment.NewLine + Resources.MarkdownViewerHTML + Environment.NewLine + Regex.Replace(this.markdownViewer.Options.HtmlCssStyle, this.patternCSSImportStatements, "").Trim();
         }
 
         /// <summary>
