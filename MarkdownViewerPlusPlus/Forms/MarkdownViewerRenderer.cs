@@ -81,7 +81,7 @@ namespace com.insanitydesign.MarkdownViewerPlusPlus.Forms
                 //Get some file information
                 string src = imageLoadEvent.Src;
                 Regex reg = new Regex("^(file|http|https)://.*");
-                if(!reg.IsMatch(src)) src = @"file:///" + src;
+                if(!reg.IsMatch(src)) src = @"file:///" + Regex.Replace(src, @"\?.*", "");//remove any params. like "?raw=1" from src
                 Uri uri = new Uri(src);
                 string extension = Path.GetExtension(src);
 

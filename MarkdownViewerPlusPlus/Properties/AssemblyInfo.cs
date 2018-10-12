@@ -33,5 +33,5 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 // - Build Number .201 for testing purposes
-[assembly: AssemblyVersion("0.8.201.*")]
-[assembly: AssemblyFileVersion("0.8.201.lz")]
+[assembly: AssemblyVersion("0.8.202.*")]
+[assembly: AssemblyFileVersion("0.8.202.lz")]
