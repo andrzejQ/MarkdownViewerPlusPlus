@@ -10,6 +10,8 @@ A Notepad++ Plugin to view a Markdown file rendered on-the-fly
 * Notepad++ Unicode Plugin
 
 ## Latest Versions
+* (0.8.202) (- Build number .202 for testing purposes)
+  * when @"file:///" is added to img file name, also any params. "?..." like "?raw=1" are removed
 * (0.8.201) (- Build number .201 for testing purposes)
   * Image support relative path - fork <https://github.com/914802951/MarkdownViewerPlusPlus>
   * Table with borders - but can be overwritten by MarkdownViewer++ [Options](#options) \ HTML \ Custom CSS
